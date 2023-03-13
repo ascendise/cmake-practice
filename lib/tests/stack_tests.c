@@ -89,6 +89,10 @@ void test_peek_stackEmpty_shouldReturnError() {
     stack_free(stack);
 }
 
+void test_fail() {
+    TEST_FAIL();
+}
+
 int main(void) {
     UNITY_BEGIN();
     RUN_TEST(test_pushPop_noExceptions_shouldReturnSameElementWhenPushingAndPopping);
@@ -98,5 +102,6 @@ int main(void) {
     RUN_TEST(test_length_noExceptions_shouldReturnCorrectLength);
     RUN_TEST(test_peek_noExceptions_shouldReturnLastElementWithoutRemovingIt);
     RUN_TEST(test_peek_stackEmpty_shouldReturnError);
+    RUN_TEST(test_fail);
     return UNITY_END();
 }
